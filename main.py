@@ -84,4 +84,5 @@ async def on_message(message):
                 print(f"✅ Sending Alert: {alert_message}")
                 await scam_alerts_channel.send(alert_message)
 
+# ✅ Run the bot using the Discord token
 bot.run(os.getenv("DISCORD_BOT_TOKEN"))
