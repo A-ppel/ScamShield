@@ -18,6 +18,7 @@ ticket_scammer_map = {}
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user}')
+    await bot.tree.sync()  # Sync commands at startup
 
 @bot.event
 async def on_message(message):
