@@ -57,7 +57,7 @@ async def on_message(message):
             scam_alerts_channel = await bot.fetch_channel(SCAM_ALERTS_CHANNEL_ID)
             if scam_alerts_channel:
                 await scam_alerts_channel.send(
-                    f"🚨 **New Scam Report Created!** 🚨\n"
+                    f"🚨 **New Scamper Report Created!** 🚨\n"
                     f"👤 **Reported by:** {ticket_creator}\n"
                     f"👤 **Scammer Username:** `{scammer_username}`\n"
                     f"🎮 **Platform/Game:** `{platform_game}`\n"
@@ -74,7 +74,7 @@ async def report(ctx, user: discord.Member, *, platform_game: str):
     scam_alerts_channel = await bot.fetch_channel(SCAM_ALERTS_CHANNEL_ID)
     if scam_alerts_channel:
         await scam_alerts_channel.send(
-            f"🚨 **New Scam Report Created!** 🚨\n"
+            f"🚨 **New Scamper Report Created!** 🚨\n"
             f"👤 **Reported by:** {ctx.author.mention}\n"
             f"👤 **Scammer Username:** `{user.name}`\n"
             f"🎮 **Platform/Game:** `{platform_game}`\n"
