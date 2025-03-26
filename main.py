@@ -53,16 +53,6 @@ async def on_message(message):
         if scammer_username and platform_game and ticket_creator:
             ticket_scammer_map[message.channel.name] = (scammer_username, platform_game, ticket_creator)
 
-            # Log to Ticket Logs Channel
-            ticket_logs_channel = await bot.fetch_channel(TICKET_LOGS_CHANNEL_ID)
-            if ticket_logs_channel:
-                await ticket_logs_channel.send(
-                    f"📄 **New ScamERR Report Logged**\n"
-                    f"👤 **Reported by:** {ticket_creator}\n"
-                    f"👤 **Scammer:** `{scammer_username}`\n"
-                    f"🎮 **Platform/Game:** `{platform_game}`"
-                )
-
             # Send Scam Alert
             scam_alerts_channel = await bot.fetch_channel(SCAM_ALERTS_CHANNEL_ID)
             if scam_alerts_channel:
