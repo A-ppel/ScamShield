@@ -57,7 +57,7 @@ async def on_message(message):
             ticket_logs_channel = await bot.fetch_channel(TICKET_LOGS_CHANNEL_ID)
             if ticket_logs_channel:
                 await ticket_logs_channel.send(
-                    f"📄 **New Scam Report Logged**\n"
+                    f"📄 **New ScamERR Report Logged**\n"
                     f"👤 **Reported by:** {ticket_creator}\n"
                     f"👤 **Scammer:** `{scammer_username}`\n"
                     f"🎮 **Platform/Game:** `{platform_game}`"
